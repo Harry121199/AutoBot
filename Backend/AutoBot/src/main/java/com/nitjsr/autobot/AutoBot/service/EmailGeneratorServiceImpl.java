@@ -64,11 +64,18 @@ public class EmailGeneratorServiceImpl implements EmailGeneratorService {
 
     private String promptGenerator(EmailRequest emailRequest) {
         StringBuilder sb = new StringBuilder();
-        sb.append("Generate a professional email reply for the following email content. Please don't generate a subject line. ");
+
+        if(emailRequest.getEmailContent()!=null&&!emailRequest.getEmailContent().isEmpty()) {
+            sb.append("Generate a professional email reply for the following email content. Please don't generate a subject line. ");
+            sb.append("\nOriginal email: ").append(emailRequest.getEmailContent());
+        }
+        else{
+            sb.append("\n Generate a professional email for the following subject title.\n");
+            sb.append("Subject title is: ").append(emailRequest.getSubjectContent());
+        }
         if (emailRequest.getTone() != null && !emailRequest.getTone().isEmpty()) {
             sb.append("Use a ").append(emailRequest.getTone()).append(" tone. ");
         }
-        sb.append("\nOriginal email: \n").append(emailRequest.getEmailContent());
         return sb.toString();
     }
 

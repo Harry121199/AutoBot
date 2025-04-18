@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7342be97-13f2-49c2-a33b-26feadfea35f" name="Changes" comment="whole project added">
+    <list default="true" id="7342be97-13f2-49c2-a33b-26feadfea35f" name="Changes" comment="extention files added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/AutoBot/src/main/java/com/nitjsr/autobot/AutoBot/payload/EmailRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/AutoBot/src/main/java/com/nitjsr/autobot/AutoBot/payload/EmailRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/AutoBot/src/main/java/com/nitjsr/autobot/AutoBot/service/EmailGeneratorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/AutoBot/src/main/java/com/nitjsr/autobot/AutoBot/service/EmailGeneratorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-writer-ext/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/email-writer-ext/content.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744783182487</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="extention files added">
+      <option name="closed" value="true" />
+      <created>1744808577644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744808577644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="whole project added" />
-    <option name="LAST_COMMIT_MESSAGE" value="whole project added" />
+    <MESSAGE value="extention files added" />
+    <option name="LAST_COMMIT_MESSAGE" value="extention files added" />
   </component>
 </project>

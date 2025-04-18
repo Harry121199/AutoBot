@@ -27,6 +27,14 @@ function getEmailContent(){
     }
 }
 
+function getSubjectContent(){
+    const selectors = 'input.aoT';
+    const content = document.querySelector(selectors);
+    if(content) 
+        return content.value.trim();;
+    return '';
+}
+
 function creatAIButton(){
     const button = document.createElement('div');
     button.className = 'T-I J-J5-Ji aoO v7 T-I-atl L3';
@@ -56,6 +64,10 @@ const injectButton = () => {
             button.disabled = true;
 
             const emailContent = getEmailContent();
+            const subjectContent = getSubjectContent();
+
+            // console.log(subjectContent);
+
             const response = await fetch('http://localhost:8080/api/email/generate',{
                 method: 'POST',
                 headers:{
@@ -63,6 +75,7 @@ const injectButton = () => {
                 },
                 body: JSON.stringify({
                     emailContent: emailContent,
+                    subjectContent: subjectContent,
                     tone:"professional"
                 })
             });
@@ -73,6 +86,7 @@ const injectButton = () => {
             const composeBox  = document.querySelector('[role="textbox"][g_editable="true"]');
             if(composeBox){
                 composeBox.focus();
+                composeBox.innerHTML = '';
                 document.execCommand('insertText',false,generatedReply);
             } else {
                 console.error('compose box was not found');
